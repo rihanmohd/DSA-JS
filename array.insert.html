@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Insert Element in Array</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let data = [3,6,7,4,34,3];
+        console.log(data)
+        const newEle = 18;
+        let position = 3;
+        for(i = data.length-1; i >=0; i--) {
+           if(i >= position){
+            data[i+1] = data[i];
+            if(i == position) {
+                data[i] = newEle;
+            }
+
+           }
+        }
+        console.log(data);
+
+
+
+        ((dynimecly))
+        function insertfn () {
+          
+        let data = [3,6,7,4,34,3];
+
+      let pos = document.getElementById('pos').value;
+      let newEle = document.getElementById('elm').value;
+      newEle = parseInt(newEle);
+          console.log(data);
+
+        for(i = data.length-1; i >=0; i--) {
+           if(i >= pos){
+            data[i+1] = data[i];
+            if(i == pos) {
+                data[i] = newEle;
+            }
+
+           }
+        }
+        console.log(data)
+        }
+
+        // ((built in function for this work))
+        let items = [2,45,56,6,78,5];
+        items.splice(2,0,400);
+        console.log(items);
+
+
+    //    ((spred op for array))
+
+        //  let arr = ["honda", "meruti", "van"];
+        // let dt = [...arr, "scorpio"];
+        // console.log(dt)
+
+
+        //  let arr = ["honda", "meruti", "van"];
+        // let dt = ["scorpio", ...arr];
+        // console.log(dt)
+
+
+
+        // ((spred op for object))
+        // let person = {
+        //     name: "vikram",
+        //     class: 12
+        // }
+
+
+        // let newperson = {
+        //     ...person,
+        //     ag: 23,
+        //     city: "sre"
+        // }
+
+        // console.log(newperson)
+    </script>
+    <input id="pos" type="text" placeholder="Ente position">
+    <input id="elm" type="text" placeholder="Enter element">
+    <button onclick="insertfn()">Insert </button>
+</body>
+</html> 
+

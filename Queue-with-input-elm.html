@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Queue  with Input </title>
+
+
+
+
+    <script>
+        let data = [];
+        let currentSize = data.length;
+        let max = 5;
+
+
+        // function enqueue(newVl){
+        //     if(currentSize >= max){
+        //         console.log("queue is Already full");
+
+        //     }else{
+
+        //         data[currentSize] = newVl;
+        //         currentSize++;
+
+        //     }
+
+        // }
+
+
+
+
+        
+        function enqueueBtn(){
+            let newVl = document.getElementById('qel').value;
+            if(currentSize >= max){
+                console.log("queue is Already full");
+
+            }else{
+
+                data[currentSize] = newVl;
+                currentSize++;
+                document.getElementById('qel').value = "";
+
+                // console.log(data);
+
+            }
+
+        }
+
+
+         
+        function dequeue(){
+            if(currentSize > 0){
+                for(i = 0; i < data.length; i++){
+                    data[i] = data[i+1];
+                }
+                currentSize--;
+                data.length = currentSize;
+
+                // console.log(data)
+            }else{
+                console.log("queue is already empty");
+            }
+           
+        }
+
+
+        function front(){
+            if(currentSize > 0){
+
+                console.log(data[0])
+
+            }else{
+                console.log("queque is already empty");
+            }
+        }
+
+
+
+        function rear(){
+            // if(currentSize > 0){
+
+            if(isEmpty()){
+
+                console.log(data[currentSize-1])
+
+            }else{
+                console.log("queque is already empty");
+            }
+        }
+
+
+        function isEmpty(){
+            if(currentSize > 0){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+
+
+    function display(){
+            console.log(data);
+        }
+
+        display()
+
+
+
+    // enqueue(20)
+    // enqueue(30)
+    // dequeue()
+    // enqueue(45)
+    //  enqueue(50)
+    // enqueue(60)
+
+//    rear()
+//     remove()
+//         console.log(data)
+    </script>
+
+
+
+
+
+
+
+
+<input type="text" name="" id="qel" placeholder="Enter Element Here">
+<button onclick="enqueueBtn()">Add El</button>
+<button onclick="dequeue()">Remove El</button>
+<br>
+<button onclick="display()">Display</button>
+<button onclick="front()">Front El</button>
+<button onclick="rear()">Rear El</button>
+</head>
+<body>
+    <h1>Queue  with Input </h1>
+</body>
+</html>

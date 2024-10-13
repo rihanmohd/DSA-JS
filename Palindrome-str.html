@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Palindrome string </title>
+
+    <script>
+        function palindromeSearch(data){
+            let start = 0;
+            let end = data.length-1;
+            // console.log(end)
+            let result = true;
+            while(end > start){
+
+               if(data[start] != data[end]){
+                result = false;
+               }
+
+                start++;
+                end--;
+            }
+            return result
+
+
+
+        }
+
+        let str = "level";
+       console.log(palindromeSearch(str))
+    </script>
+</head>
+<body>
+    
+
+
+    <h1>Palindrome string </h1>
+</body>
+</html>

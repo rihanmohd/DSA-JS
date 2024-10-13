@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>String Reversing  with Stack In Java Script</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script>
+        let data = [];
+        let currentSize =  data.length;
+
+        function push(newel){
+            data[currentSize] = newel;
+            currentSize++;
+
+
+        }
+
+        function pop(){
+
+            lastRemoveItem = data[currentSize-1]
+            currentSize-=1;
+            data.length = currentSize;
+            return lastRemoveItem;
+
+        }
+
+      function  reverseStr(item){
+            // console.log(item)
+            for(i =0; i< item.length; i++){
+                push(item[i])
+            }
+            
+            for(i =0; i< item.length; i++){
+              item[i] = pop();
+            }
+            
+
+        }
+
+       let str = "Rihan";
+       str = str.split("");
+
+       reverseStr(str);
+       console.log(str.join(""))
+        
+    </script>
+</body>
+</html>

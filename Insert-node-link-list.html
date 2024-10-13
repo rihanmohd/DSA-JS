@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Insert Node In Linked List Js</title>
+    <script>
+         class List{
+
+constructor(data){
+    this.head = {
+        value: data,
+        next: null
+    };
+
+    this.tail = this.head;
+    // to check size
+    this.size = 1;
+}
+
+// fun to add sum
+addNode(nodeData){
+
+let newNode = {
+    value: nodeData,
+    next: null
+};
+this.tail.next = newNode;
+this.tail = newNode;
+this.size ++;
+
+}
+insertNode(index,Value){
+    let count = 1;
+   let  currNode = this.head;
+    while(count > index){
+        count++;
+        currNode =  currNode.next;
+    }
+   let nextNode = currNode.next;
+   currNode.next ={
+    value: Value,
+    next: nextNode,
+   }
+}
+
+
+
+}
+
+let list = new List(200);
+list.addNode(300);
+list.addNode(400);
+list.addNode(500);
+list.addNode(600);
+list.insertNode(2,5000);
+
+console.log(list);
+
+
+
+
+
+
+
+
+
+
+
+//    class List {
+//           constructor(){
+//             this.head={
+//                 value: 100,
+//                 next: null,
+
+//             }
+//             this.tail =  this.head;
+//           }
+
+//           addNode(data){
+
+//             let newNode={
+//                 value:data,
+//                 next: null
+//             }
+
+//             this.tail.next = newNode;
+//             this.tail = newNode
+
+//           }
+
+
+//           insertNode(index,value){
+//             let count = 1;
+//             let currentNode = this.head;
+//             while(count > index){
+//                 count++;
+//                 currentNode = currentNode.next;
+//             }
+
+//             let newNode = currentNode.next;
+//             currentNode.next={
+//                 value: value,
+//                 next: newNode
+//             }
+
+//           }
+//    }
+
+//    let list = new List();
+//    list.addNode(200);
+//    list.addNode(300);
+//    list.addNode(400);
+//    list.addNode(500);
+
+//    list.insertNode(2,900);
+//    console.log(list);
+
+
+
+
+
+
+
+      
+    </script>
+</head>
+<body>
+    
+
+    <h1>Insert Node In Linked List Js</h1>
+</body>
+</html>

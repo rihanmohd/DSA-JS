@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Re (repet) cursion(self) DSA</title>
+</head>
+<body>
+    
+
+    <script>
+// recursion a function which calles himself repetedly
+
+        // function apple (x){
+        //     console.log(x)
+        //     if(x<15){
+        //         apple(x+1);
+        //     }
+        // }
+        // let data = 2;
+        // apple(data);
+
+
+
+
+
+
+        // factorial of 5 = 5*4*3*2*1;
+
+// by function 
+// 5
+        function factorial (item){
+
+            if(item == 0){
+                return 1
+            }
+           return item * factorial(item-1)
+        //    return 5*factorial(5-1)*factorial(4-1)*factor(3-1)*fact(2-1)*fact(1-1)
+
+    
+        }
+
+        let data = 5;
+     console.log(factorial(data))
+    </script>
+</body>
+</html>

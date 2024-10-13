@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Stack with input and button</title>
+</head>
+<body>
+    <h1>Stack In Java script</h1>
+    <input type="text" id="newel" placeholder="Enter Stack Element" >
+    <button id="push-btn" onclick="push()">PUSH</button>
+    <button id="pop-btn" onclick="pop()">POP</button>
+    <button id="display" onclick="daisplay()">daisplay all Elm</button>
+
+
+
+    <script>
+       let data = [];
+       let currentSize = data.length;
+       let max = 10;
+
+       function push(){
+      
+        let newvl = document.getElementById('newel').value;
+
+        if(currentSize > max){
+            console.log("stack is full")
+
+        }else{
+
+            data[currentSize] = newvl;
+            currentSize++;
+            document.getElementById('newel').value = " ";
+            console.log("elm added");
+
+
+        }
+
+        
+       }
+
+
+       function pop(){
+        if(currentSize > 0){
+            currentSize -=1;
+            data.length = currentSize;
+        }else{
+            console.log("stack is allready empty")
+        }
+       }
+
+
+       function daisplay(){
+        for(i = 0; i <= currentSize-1; i++){
+            console.log("stack element num", i, "and value is", data[i])
+        }
+       }
+    </script>
+
+</body>
+</html>

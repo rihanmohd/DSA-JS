@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Binary Serch Recursive Approach</title>
+
+    <script>
+
+
+
+
+    let data = [22,33,44,55,66];
+    let find = 66;
+    let pos = undefined;
+    let start = 0;
+    let end = data.length-1;
+  function recursiveBinary (d,s,e){
+    let mid = Math.floor((s + e) /2);
+//    console.log(data[mid]);
+if(data[mid] === find){
+    pos = mid;
+    return true
+}else if(data[mid] < find){
+    recursiveBinary(data, mid+1, e)
+
+}else{
+    recursiveBinary(data, s, mid-1)
+}
+
+  }
+
+  recursiveBinary(data,start,end);
+  console.log(pos);
+    </script>
+</head>
+<body>
+    
+<h1>Recursive Binary Search in Java Script </h1>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Traversing In Link List JS</title>
+    <script>
+
+
+     class List{
+        constructor(data){
+            this.head = {
+                    value: data,
+                    next: null
+                };
+
+                this.tail = this.head;
+                // to check size
+                this.size = 1;
+            }
+
+            // fun to add sum
+            addNode(nodeData){
+            
+            let newNode = {
+                value: nodeData,
+                next: null
+            };
+            this.tail.next = newNode;
+            this.tail = newNode;
+            this.size ++;
+
+            }
+
+            traversing(){
+                let count = 0;
+                let currNode = this.head;
+                while(count < this.size){
+                    console.log(currNode);
+                    currNode = currNode.next;
+                    count++;
+                   
+                }
+
+            }
+
+
+        }
+
+        let list = new List(200);
+        list.addNode(300);
+        list.addNode(400);
+        list.addNode(500);
+        list.addNode(600);
+        list.traversing()
+
+
+        // console.log(list);
+        
+     
+
+    </script>
+</head>
+<body>
+    
+
+
+    <h1>Traversing In Link List JS</h1>
+</body>
+</html>

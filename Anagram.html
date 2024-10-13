@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Anagram of an string</title>
+
+    <script>
+        function checkAnagram(str1,str2){
+            let objstr1 = {};
+            if(str1.length !== str2.length){
+                return false;
+            }
+           
+            for(ch of str1){
+                // console.log(ch);
+              objstr1[ch] = (objstr1[ch] ||  0) +1;
+            //   console.log(objstr1)
+            }
+
+            
+            for(ch of str2){
+                // console.log(objstr1[ch])
+                if(!objstr1[ch]){
+                    return false;
+                }
+                
+                    objstr1[ch]--
+            }
+            return true
+            // console.log(objstr1)
+        }
+
+      console.log( checkAnagram("hello", "ehklo"))
+    </script>
+</head>
+<body>
+    
+
+    <h1>Anagram of an string</h1>
+</body>
+</html>

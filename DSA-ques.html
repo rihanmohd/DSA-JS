@@ -1,0 +1,506 @@
+<!-- Questions to be coded in js
+
+1. **Swap Two Variables a and b**
+   - Write a program to swap the values of two variables a and b without using a third variable. Explain the logic behind the approach used.
+
+2. *Find the Largest Number Among Two Numbers*
+   - Write a program to compare two numbers and print the larger one. Consider different scenarios like when both numbers are equal.
+
+3. *Find the Largest Number Among Three Numbers*
+   - Write a program that takes three numbers as input and finds the largest among them. Explain the approach used to handle three comparisons.
+
+4. *Generate an Odd Number Series*
+   - Write a program to generate and print a series of odd numbers up to a given limit using a loop. Discuss the logic for identifying odd numbers.
+
+5. *Generate an Even Number Series*
+   - Write a program to generate and print a series of even numbers up to a given limit using a loop. Discuss the logic for identifying even numbers.
+
+6. **Generate a Square Series Using a for Loop**
+   - Write a program that generates and prints the square of numbers up to a given limit using a for loop. Explain how the square of a number is calculated.
+
+7. **Generate a Cube Series Using a for Loop**
+   - Write a program that generates and prints the cube of numbers up to a given limit using a for loop. Discuss the logic for calculating the cube of a number.
+
+8. **Print a Star Pattern Using a for Loop**
+   - Write a program to print a specific star pattern (e.g., a triangle or pyramid) using nested for loops. Explain the pattern and the logic used to generate it.
+
+9. *Store Elements in an Array*
+   - Write a program that accepts a set of numbers from the user and stores them in an array. Discuss how to handle user input and store it in the array.
+
+10. *Find the Maximum Element in an Array*
+    - Write a program to find and print the maximum element in an array of integers. Discuss how the program iterates through the array to find the largest value.
+
+11. *Find the Minimum Element in an Array*
+    - Write a program to find and print the minimum element in an array of integers. Discuss how the program iterates through the array to find the smallest value.
+
+12. *Store Prime Numbers in an Array*
+    - Write a program to find all prime numbers up to a given limit and store them in an array. Explain the logic for checking whether a number is prime.
+
+13. *Identify Subarrays in an Array*
+    - Write a program that identifies and prints all possible subarrays of a given array. Discuss the logic for generating subarrays from the main array.
+
+14. *Find the Maximum Sum Subarray*
+    - Write a program to find the subarray within a given array that has the maximum sum. Explain the approach used, such as Kadane’s Algorithm.
+
+15. *Find the Maximum Element in a 2D Array*
+    - Write a program to find and print the maximum element in a 2D array (matrix). Discuss how to iterate through the rows and columns to find the largest value.
+
+16. *Implement Bubble Sort*
+    - Write a program to sort an array of integers using the Bubble Sort algorithm. Explain the algorithm’s working and its time complexity.
+
+17. *Implement Insertion Sort*
+    - Write a program to sort an array of integers using the Insertion Sort algorithm. Discuss the process of inserting elements in their correct position.
+
+18. *Implement Selection Sort*
+    - Write a program to sort an array of integers using the Selection Sort algorithm. Explain the selection process and its impact on performance.
+
+19. *Answer Questions on Time Complexity*
+    - Discuss different algorithms and their time complexity. Provide examples of how to calculate time complexity for a given algorithm.
+
+20. *Answer Questions on Space Complexity*
+    - Discuss different algorithms and their space complexity. Provide examples of how to calculate space complexity for a given algorithm.
+
+21. *Find the Maximum Number of Words in a Given String*
+    - Write a program to find the maximum number of words in a given string, considering spaces as delimiters. Discuss edge cases such as multiple spaces and punctuation marks. -->
+
+
+
+
+
+
+ <!-- let a = 5;
+ let b = 20;
+ // [b,a] = [a,b];
+ a = a+b;
+ b = a-b;
+ a = a-b;
+ console.log(a);/ console.log(b);
+
+
+ ((2))
+ find lg among two
+ let a = 60;
+ let b = 90;
+ if(a > b){
+     console.log(a,"a is larger")
+ } else{
+     console.log(b,"b is larger")
+ }
+ 
+
+
+// (3)
+// find lg among three
+// let a = 20;
+// let b = 30;
+// let c = 40;
+// let lg = Math.max(a,b,c);
+// console.log(lg)
+
+// second way
+// let a = 99;
+// let b = 98;
+// let c = 97;
+// if(a >= b && a >=c) {
+//   console.log(a)
+// } else if (b >= a && b >= c) {
+//   console.log(b)
+// } else{
+//   console.log(c)
+// }
+
+// (third way)
+// let a = parseInt(prompt("Enter first number"));
+// let b = parseInt(prompt("Enter second number"));
+// let c = parseInt(prompt("Enter three number"));
+
+// if(a >= b && a >= c) {
+//   console.log(a)
+// } else if(b >= a && b >=c) {
+//   console.log(b)
+// }else{
+//   console.log(c)
+// }
+
+ -->
+
+<!-- // ((4))
+// odd no
+// const arr = 21;
+// for (let i = 1; i <= arr; i++){
+//     if (i % 2!= 0){
+//         console.log(i)
+//     }
+//   } -->
+
+<!-- // ((5))
+// even no
+// const sum = 30;
+// for(let a = 1; a <= sum; a++){
+//     if(a % 2 == 0){
+//       console.log(a)
+//     }
+  
+       
+// } -->
+
+
+
+<!-- // ((6))
+// square
+// for(let a = 2; a <= 10; a++){
+//     console.log(a*a)
+// }
+
+// ((7))
+// cube no
+// for(let a = 2; a <= 10; a++){
+//     console.log(a*a*a)
+// }
+
+
+// ((8))
+
+// star pattern
+// for(let a = 1; a <= 10; a++){
+
+//   for(let b = 1; b <= a; b++){
+
+//       console.log("*");
+//   }
+  
+// console.log("\n");
+
+// }
+
+
+
+// ((second way))
+// for(var i=1; i<=5; i=i+1)
+// {
+ 
+//   String = ""
+//   for(var j=5; j<=4+i;)
+//   {
+//     String=String+"*";
+//     j=j+1
+//   }
+//   console.log(String);
+// }
+
+
+// ((third way))
+// let rows = 5;
+// for(let i = 1; i <= rows; i++) {
+//   let str = "";
+//   for(let j =1; j <=i; j++) {
+//     str += "*";
+
+//   }
+//   console.log(str)
+// }
+
+
+// ((12))
+// ((mx in arr))
+// let arr = [6, 8,40, 9, 7];
+
+// const max = Math.max(6, 8,40, 9, 7)
+// console.log(max)
+// console.log(arr)
+
+
+// ((13))
+// ((min in arr))
+// let arr = [4, 6, 7, 90];
+// let sum = arr[0];
+// for(i = 1; i < arr.length; i++) {
+//   // console.log(arr)
+//   if (arr[i] < sum) {
+//     sum = arr[i]
+//   }
+// }
+// console.log(sum)
+
+
+
+
+// ((prim no))
+// let limit = 20;
+// let primes = [];
+
+// for (let num = 2; num <= limit; num++) {
+//   let sum = true;
+
+//   for (let i = 2; i < num; i++) {
+//     if (num % i === 0) {
+//       sum = false;
+//       break;
+//     }
+//   }
+
+//   if (sum) {
+//     primes.push(num);
+//   }
+// }
+
+// console.log(primes);
+
+
+// ((identfy sub arry))
+// let arr = [1, 2, 3, 4, 5];
+// let subarrays = [];
+
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = i + 1; j <= arr.length; j++) {
+//     subarrays.push(arr.slice(i, j));
+//   }
+// }
+
+// console.log(subarrays);
+
+
+// ((10))
+// ((find prime and store them in array))
+// function findPrimes (limit) {
+
+//   let primes = []
+//   for (let num = 2; num <= limit; num++) {
+//     let isPrime = true; 
+//     for (let i = 2; i < num; i++) {
+//       if(num % i === 0) {
+//         isPrime = false;
+//         break;
+
+//       }
+//     }
+//     if(isPrime) {
+//       primes.push(num);
+
+//     }
+//   }
+//   return primes;
+// }
+
+// let limit = 100;
+// let primeNumbers = findPrimes(limit);
+// console.log(primeNumbers)
+
+
+
+
+// ((15))
+// print all sub array
+// function printSubarrays(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i; j < arr.length; j++) {
+//       console.log(arr.slice(i, j + 1));
+//     }
+//   }
+// }
+
+// let array = [1, 2, 3, 4, 5];
+// printSubarrays(array);
+
+// (2nd way)
+// function printSubarrays(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     console.log(arr.slice(i));
+//   }
+// }
+
+// let arr = [1, 2, 3, 4, 5];
+// printSubarrays(arr);
+
+// ((16))
+// function maxWordsInString(s) {
+    
+//     s = s.trim();
+    
+//     s = s.replace(/\s+/g, ' ');
+    
+    
+//     let words = s.split(' ');
+    
+//     return words.length;
+// }
+
+// // Test the function
+// console.log(maxWordsInString("Hello World! This is a test string."));
+
+
+// mine
+// let words = "hello how are you";
+// num = words.trim();
+// num = words.split(' ');
+// console.log(num.length);
+
+
+// (18)
+// ((num from the user and store them in array ))
+// let numbers = [];
+
+// let count = parseInt(prompt("How many numbers do you want to enter?"));
+
+// for (let i = 0; i < count; i++) {
+  
+//   numbers.push(parseInt(prompt(`Enter number ${i}`)));
+// }
+
+// console.log("You entered the following numbers:");
+// console.log(numbers);
+
+
+// ((2nd simple))
+// let count = 123;
+// // console.log(count)
+// let arr = [];
+// arr.push(count);
+// console.log(arr)
+
+// (mine)
+// let numbers = [];
+// let count = parseInt(prompt("Enter number what you want"));
+
+// for(i = 0; i < count; i++) {
+//   numbers.push(parseInt(prompt("enter num")))
+  
+// }
+
+// console.log(numbers)
+
+
+// ((19))
+// ((bubble sort))
+// function bubbleSort (arr) {
+//   for(let i = arr.length; i > 0; i--) {
+//     for(let j = 0; j < i-1; j++) {
+//       if(arr[j] > arr[j+1]) {
+//         let temp = arr[j];
+//         arr[j] = arr[j+1]
+//         arr[j+1] = temp;
+//       }
+
+//     }
+//   }
+//   return arr;
+// }
+// const result = bubbleSort([3,78,98,78,90,7,8])
+// console.log(result)
+
+
+// ((20))
+// kadans alg
+// function maxSubarraySum(arr) {
+//   let max = arr[0];
+//   let maxEnd = arr[0];
+  
+//   for (let i = 1; i < arr.length; i++) {
+//     maxEnd = Math.max(arr[i], maxEnd + arr[i]);
+//     max = Math.max(max, maxEnd);
+//   }
+  
+//   return max;
+// }
+
+// 
+// let arr = [6, 7, 8, 5, 4];
+// console.log("Maximum subarray sum:", maxSubarraySum(arr));
+
+
+// ((21))
+// insertion sort
+// function insertionSort(arr) {
+//   for (let i = 1; i < arr.length; i++) {
+//     let key = arr[i];
+//     let j = i - 1;
+
+//     while (j >= 0 && arr[j] > key) {
+//       arr[j + 1] = arr[j];
+//       j--;
+//     }
+
+//     arr[j + 1] = key;
+//   }
+
+//   return arr;
+// }
+
+// let arr = [5, 2, 8, 3, 1, 6, 4];
+// console.log("Sorted array:", insertionSort(arr));
+
+
+// ((20))
+// ((selection sort))
+// function selectionSort(arr) {
+//   let n = arr.length;
+
+//   for (let i = 0; i < n - 1; i++) {
+    
+//     let minIndex = i;
+
+//     for (let j = i + 1; j < n; j++) {
+//       if (arr[j] < arr[minIndex]) {
+//         minIndex = j;
+//       }
+//     }
+
+    
+//     [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+//   }
+
+//   return arr;
+// }
+
+
+// let arr = [5, 2, 8, 3, 1, 6, 4];
+// console.log("Sorted array:", selectionSort(arr));
+
+
+
+// ((20))
+// function findMaxElement(matrix) {
+//   maxElement = matrix[0][0];
+  
+//   // Iterate through each row
+//   matrix.forEach(function(row) {
+//       // Iterate through each column in the row
+//       row.forEach(function(element) {
+//           // Check if the current element is greater than maxElement
+//           if (element > maxElement) {
+//               maxElement = element;
+//           }
+//       });
+//   });
+  
+//   return maxElement;
+// }
+
+// // Test the function
+// matrix = [[1, 2, 3], [4, , 6], [7, 8, 9]];
+// console.log("Maximum element in the matrix:", findMaxElement(matrix));
+
+// ((learned))
+// let matrix = [
+//   [10,20,30],
+//   [40,50,60],
+//   [70,80,90],
+// ];
+
+// let biggest = matrix[0] [0];
+// for (i = 0; i < 3; i++) {
+//   for(j = 0; j < 3; j++) {
+//     if(matrix[i] [j] > biggest) {
+//       biggest = matrix[i] [j];
+
+//     }
+//   }
+//   }
+// // }
+// console.log(biggest) -->
+
+
+
+
+
+

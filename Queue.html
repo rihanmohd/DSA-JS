@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Queue In Java Script</title>
+
+    <script>
+        let data = [];
+        let currentSize = data.length;
+       let maxSize = 5;
+
+        function enqueue(newVl){
+
+            if(currentSize >= maxSize){
+                console.log("Queue is already full");
+            }else{
+                data[currentSize] = newVl;
+            currentSize++;
+
+            }
+            
+
+        }
+
+
+        // function display(){
+        //     // console.log(data);
+        // }
+
+        
+        // enqueue(20)
+        // enqueue(30)
+        // enqueue(40)
+        // enqueue(50)
+        // enqueue(60)
+        // enqueue(10)
+        // display()
+
+
+     function dequeue(){
+
+        if(currentSize > 0){
+
+            for(i = 0; i < data.length; i++){
+            data[i] = data[i+1];
+
+        }
+
+        currentSize--;
+        data.length = currentSize;
+
+        }else{
+            console.log("Queue Is already empty");
+        }
+        
+     }
+
+        enqueue(20)
+        enqueue(30)
+        enqueue(40)
+        enqueue(50)
+        enqueue(60)
+        dequeue()
+        console.log(data)
+        
+
+    </script>
+</head>
+<body>
+    
+
+    <h1>Queue In Java Script</h1>
+</body>
+</html>

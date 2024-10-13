@@ -1,0 +1,91 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Binary Search In Java Script</title>
+
+
+    <script>
+   
+//    binary search is used for sorted array
+   let data = [22,33,44,55,66,77,88];
+   let find = 44;
+   let start = 0;
+   let end = data.length-1;
+   let pos = undefined;
+
+   while(start <= end){
+    let mid = Math.floor( (start + end) /2);
+    // Math.flor removes points 
+    // console.log(mid);
+
+    if(data[mid] === find){
+        pos = mid;
+        break;
+
+    }else if(data[mid] < find){
+        start = mid+1;
+
+
+    }else{
+
+        end = mid-1;
+
+    }
+   
+   }
+
+   console.log(pos);
+     
+    </script>
+
+</head>
+<body>
+
+
+      <h1>Binary Search In Java Script</h1>
+</body>
+</html> -->
+
+
+
+
+<!-- ///////////////////////////////////////////// SELF STUDY ///////////// -->
+ <!-- ///////////////////////////////////////////////      /////////////////// -->
+
+
+ <script>
+
+
+function find(){
+
+    let data = [22,33,44,55,66,77,88,99];
+   let pos = undefined;
+   let find = document.getElementById('input').value;
+// let find = 77;
+   let start = 0;
+   let end =  data.length-1;
+
+   while(start <= end){
+    let mid = Math.floor((start + end) /2);
+    if(data[mid] === find){
+        pos = mid;
+        break;
+    }else if(data[mid] < find){
+        start = mid+1;
+
+    }else{
+        end = mid-1;
+
+    }
+   }
+
+console.log(pos)
+
+}
+
+ </script>
+
+
+<button onclick="find()">Find pos</button>
+<input type="text" name="" id="input" placeholder="Enter to find pos">

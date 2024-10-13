@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Linked List DSA In JS</title>
+
+    <script>
+
+        class List{
+
+            constructor(data){
+                this.head = {
+                    value: data,
+                    next: null
+                };
+
+                this.tail = this.head;
+                // to check size
+                this.size = 1;
+            }
+
+            // fun to add sum
+            addNode(nodeData){
+            
+            let newNode = {
+                value: nodeData,
+                next: null
+            };
+            this.tail.next = newNode;
+            this.tail = newNode;
+            this.size ++;
+
+            }
+
+            
+
+        }
+
+        let list = new List(200);
+        list.addNode(300);
+        list.addNode(400);
+        list.addNode(500);
+        list.addNode(600);
+        console.log(list);
+
+
+
+
+
+
+        // copy
+        // let a = {name: "rihan"};
+        // let b = a;
+        // b.name = "nadeem";
+        // console.log(a)
+    </script>
+</head>
+<body>
+    
+
+
+    <h1>Link List DSA In JS</h1>
+</body>
+</html>

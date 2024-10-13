@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Rejex Expretion for Email Validation</title>
+    
+</head>
+<body>
+    
+      
+
+    <div class="container  bg-cover  rounded-md h-[300px] w-[500px] mx-auto mt-28">
+        <br>
+        <br>
+        <h1 class="text-center text-white bg-black h-9 text-2xl leading-10 rounded-sm w-96 mx-auto">Email Validatio using REgex</h1>
+        <br><br>
+        <form onsubmit="return myfun()">
+           <div class="mx-auto ml-16">
+
+               <label class="font-bold">Email Id: </label>
+               <br>
+               <input type="text" id="emailCheck" class="border-2 border-gray-400 rounded-md w-96 mt-2 h-7 ">
+               <br>
+               <span class="text-red-700 text-xl" id="showing"></span>
+           </div>
+
+           <button class="ml-16 mt-3 bg-blue-700 border-blue rounded-md text-white w-16 h-8">submit</button>
+       
+           </form>
+    </div>
+   
+    <script>
+        function myfun(){
+            
+            let emailcheck = document.getElementById('emailCheck').value;
+            let pattern = /^[A-Za-z0-9._ ]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
+
+            if(pattern.test(emailcheck)){
+                document.getElementById('showing').innerHTML = "Email Id is Correct";
+                document.getElementById('showing').style.color = "green";
+            }else{
+                document.getElementById('showing').innerHTML = "Sorry Email ID is not Correct";
+               
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

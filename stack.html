@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Stack in java script</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+// push, pop in stack
+        let data = [];
+        let currentSize = data.length;
+        let max = 5;
+
+        function push(newvl){
+            if(currentSize >= max){
+                console.log("stack is full" , + newvl)
+            }
+           
+            data[currentSize] = newvl;
+            currentSize++;
+           
+            
+          
+            
+        }
+
+
+        function pop(){
+            if(currentSize > 0){
+                currentSize-=1;
+                data.length = currentSize;
+                
+            }else{
+                console.log("stack is alredy empty")
+               
+            }
+        }
+
+
+        push(20);
+        push(30);
+        push(40);
+        push(50);
+        push(60);
+        pop()
+        // pop(),pop(),pop(),pop(),pop()
+       
+        // push(70);
+        // push(80);
+        console.log(data);
+
+    </script>
+</body>
+</html>

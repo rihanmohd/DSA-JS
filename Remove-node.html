@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Remove Node In linked list JS</title>
+
+    <script>
+        class List{
+
+            constructor(data){
+
+                this.head = {
+                    value: data,
+                    next: null
+                };
+
+                this.tail = this.head;
+                // to check size
+                this.size = 1;
+            }
+
+            // fun to add sum
+            addNode(nodeData){
+            
+            let newNode = {
+                value: nodeData,
+                next: null
+            };
+            this.tail.next = newNode;
+            this.tail = newNode;
+            this.size ++;
+
+            }
+          
+             deleteNode(index){
+                let counter  = 1;
+                let lead = this.head;
+                if(index === 1){
+                    this.head = this.head.next;
+                }else{
+                    while(counter < index-1){
+                        lead = lead.next;
+                        counter++;
+
+                    }
+
+
+                    let nexNode = lead.next.next;
+                    lead.next = nexNode;
+                    console.log(lead)
+                }
+                
+
+             }
+            
+
+        }
+
+        let list = new List(200);
+        list.addNode(300);
+        list.addNode(400);
+        list.addNode(500);
+        list.addNode(600);
+        list.deleteNode(4)
+
+
+        console.log(list);
+    </script>
+</head>
+<body>
+    
+
+
+    <h1>Remove Node In linked list JS</h1>
+</body>
+</html>
